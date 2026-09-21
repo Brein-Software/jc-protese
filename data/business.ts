@@ -1,0 +1,15 @@
+export const business = {
+  name: 'JC Protético',
+  descriptor: 'Laboratório de Prótese Dentária',
+  whatsappUrl: 'https://wa.me/5500000000000',
+  whatsappLabel: '(31) 98877-6655',
+  instagramUrl: 'https://instagram.com/jc_protetico',
+  instagramLabel: '@jc_protetico',
+  email: 'contato@jcprotetico.com.br',
+  address: '[Endereço do laboratório — Rua Exemplo, 123, Bairro, Cidade - MG]',
+  mapsUrl: 'https://maps.google.com',
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.957685651551!2d-43.9409334!3d-19.9261271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU1JzM0LjEiUyA0M8KwNTYnMjcuNCJX!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr',
+  logo: 'https://lh3.googleusercontent.com/aida/AEtjO1WveUJGoSmeE-oHjnC1macxo2eNML00CTicyVOu6BOm4Mv8h6KXtNYL7qXNHm0j_SKIIYV0gor5Bvt5H2aazoORA8WjwXmmi5xUQaTPE6F1Sbb_Qw6AXz_nO6yZQ74usdSs10BIoYGacPlkOG330CzqI22Q2NDIFYaAqXd5YshSzRNMGqRdGgXMqdDkFb5fb0PPwiCCqrYMCw-n2Clm8ZkMLlggHtVgTXepCOxUSL6ERTgc05xjUULqydU',
+  registration: 'LB CROMG 354',
+  responsible: 'Júlio César de Almeida | CROMG 2862',
+} as const
