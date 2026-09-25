@@ -1,0 +1,17 @@
+# Dependencies and package-manager files
+node_modules/
+node_modules
+
+# Nuxt generated files
+.nuxt/
+.output/
+dist/
+
+# Local caches and reports
+.cache/
+*.log
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
