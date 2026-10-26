@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import { Clock3, MessageCircle, Ruler } from '@lucide/vue'
+const publicImage = usePublicImage()
 
 const experienceBadge = ref<HTMLElement | null>(null)
 const years = ref(0)
@@ -55,7 +56,7 @@ onUnmounted(() => observer?.disconnect())
   <section id="laboratorio" class="section section-white">
     <div class="container two-column">
       <div class="laboratory-image reveal">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0b2UCf2-bTuBDVYBnGVhXQlvaYHEZ-RgraBE_zFjGZZbnRTgl_5J7SlQIYDMaJjwr2Ml9_ZCCl21et4Ex5LifyGFT42ZBt3IbhoPyCWGFbArkJ2zxrAfo-mtz9JRCMoulFd784HvRlh1R1KW7l0dIQi1ylRXqCq3DqpU-P3TxsAD9NNVQJzOsxf730Re51xkQPS6I-MK_TDbKl_2vB522U-deh5QV3IvnG6ZCAJ3RhNFYylHba4cPbg" alt="Mestre em Prótese Dentária Júlio César de Almeida ao microscópio" loading="lazy">
+        <img :src="publicImage('especialistas-em-trabalho.webp')" alt="Equipe do laboratório trabalhando em próteses dentárias" loading="lazy" width="1536" height="1024">
         <div ref="experienceBadge" class="experience-badge reveal">
           <strong>+{{ years }} anos</strong>
           <span>de experiência, escultura biomimética e dedicação</span>

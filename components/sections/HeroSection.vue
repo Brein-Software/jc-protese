@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ArrowDown, Check, Star } from '@lucide/vue'
 import { business } from '~/data/business'
+const publicImage = usePublicImage()
 </script>
 
 <template>
   <section id="top" class="hero">
-    <div class="hero-image" />
+    <div class="hero-image" :style="{ backgroundImage: `url(${publicImage('especialistas-em-acao.webp')})` }" />
     <div class="hero-overlay" />
     <div class="container hero-content">
       <div class="hero-copy">

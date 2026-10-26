@@ -26,7 +26,6 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#050505' },
       ],
       link: [
-        { rel: 'preconnect', href: 'https://lh3.googleusercontent.com' },
         { rel: 'icon', type: 'image/webp', href: `${baseURL}jc_logo.webp` },
       ],
     },
