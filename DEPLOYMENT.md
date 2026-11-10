@@ -1,28 +1,26 @@
 # Deploy no GitHub Pages
 
-Este projeto está temporariamente configurado como um GitHub Pages de projeto:
+O workflow em `.github/workflows/deploy-pages.yml` gera o site com `npm run generate` e publica `.output/public`. O site usa a raiz `/` para o domínio `jcprotetico.com.br`.
 
-`https://brein-software.github.io/jc-protese/`
+## Configuração no GitHub
 
-O workflow em `.github/workflows/deploy-pages.yml` gera o site com `npm run generate` e publica `.output/public`.
+Em **Brein-Software/jc-protese → Settings → Pages → Custom domain**, informe `jcprotetico.com.br` e salve. Como a publicação usa GitHub Actions, o arquivo `public/CNAME` é incluído no artefato, mas não substitui essa configuração nas opções do repositório. Após a emissão do certificado, habilite **Enforce HTTPS**.
 
-## Configuração temporária
+## Registros no provedor de DNS
 
-O caminho `/jc-protese/` é definido como fallback em `nuxt.config.ts` e também explicitamente no workflow pela variável `NUXT_APP_BASE_URL`.
+| Tipo | Nome | Valor |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | brein-software.github.io |
 
-O logo usa um caminho relativo em `data/business.ts`, porque caminhos absolutos começando por `/` ignoram o subdiretório do GitHub Pages.
+Remova registros `A`/`AAAA`/`ALIAS`/`ANAME` conflitantes para `@` e registros conflitantes para `www`. O domínio raiz usa registros `A`; o `CNAME` de DNS é apenas para `www`. Com ambos configurados, o GitHub Pages redireciona `www.jcprotetico.com.br` para `jcprotetico.com.br`.
 
-## Remover em uma build posterior
-
-Quando o site for servido na raiz de um domínio próprio ou em um repositório do tipo `usuario.github.io`:
-
-1. Remova o fallback `/jc-protese/` de `nuxt.config.ts` e use `/` como `baseURL`.
-2. Remova `NUXT_APP_BASE_URL` do workflow.
-3. Mantenha o logo relativo ou ajuste-o para o caminho definido pela nova hospedagem.
-4. Atualize a URL deste documento e a configuração de domínio do GitHub Pages, se aplicável.
-
-Para testar localmente com o caminho de produção:
+Para conferir a propagação:
 
 ```bash
-NUXT_APP_BASE_URL=/jc-protese/ npm run generate
+dig jcprotetico.com.br +noall +answer -t A
+dig www.jcprotetico.com.br +noall +answer -t CNAME
 ```

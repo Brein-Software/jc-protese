@@ -32,9 +32,6 @@ jobs:
 
       - name: Generate static site
         run: npm run generate
-        env:
-          # Temporary project-site path. Remove when using a root/custom domain.
-          NUXT_APP_BASE_URL: /jc-protese/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

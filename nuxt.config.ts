@@ -1,6 +1,4 @@
-// Temporary GitHub Pages project-site configuration.
-// Remove this fallback and set baseURL to '/' when moving to a root/custom domain.
-const baseURL = process.env.NUXT_APP_BASE_URL || '/jc-protese/'
+const baseURL = process.env.NUXT_APP_BASE_URL || '/'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
