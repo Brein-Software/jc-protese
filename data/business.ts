@@ -1,8 +1,8 @@
 export const business = {
   name: 'JC Protético',
   descriptor: 'Laboratório de Prótese Dentária',
-  whatsappUrl: 'https://wa.me/5532991480303',
-  whatsappLabel: '(32)99148-0303',
+  whatsappUrl: 'https://wa.me/5532988868304',
+  whatsappLabel: '(32)98886-8304',
   instagramUrl: 'https://instagram.com/jc_protetico',
   instagramLabel: '@jc_protetico',
   email: 'jcprotese@gmail.com',
